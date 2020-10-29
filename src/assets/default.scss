@@ -1,0 +1,26 @@
+:root {
+  --mainBlue: #2b77e5;
+  --secondaryDark: #a2a8ad;
+  --mainGray: #5e656b;
+  --mainDark: #1d1f21;
+  --mainLight: #e8e8e8;
+  --spacing-x-small: 2px;
+  --spacing-small: 4px;
+  --spacing-medium: 8px;
+  --spacing-large: 12px;
+  --spacing-x-large: 16px;
+  --spacing-xx-large: 20px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}

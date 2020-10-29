@@ -1,8 +1,26 @@
-import Vue from 'vue'
-import App from './App.vue'
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from "vue";
+import App from "./App";
+import router from "./router";
+import store from "./store";
+import "bootstrap/dist/css/bootstrap.css";
+import "./assets/bootstrap_custom.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+import "./assets/default.scss";
+import i18n from "./i18n";
+import VueSplide from "@splidejs/vue-splide";
+import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
 
-Vue.config.productionTip = false
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
+Vue.use(VueSplide);
+Vue.config.productionTip = false;
 
+/* eslint-disable no-new */
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  store,
+  i18n,
+  render: (h) => h(App),
+}).$mount("#app");
