@@ -24,6 +24,8 @@ import SectionHeader from "@/components/SectionHeader";
 import SiteListFilters from "@/components/SiteListFilters";
 import SiteListElement from "@/components/SiteListElement";
 
+// TODO implement infinite scroll instead of only showing first 50 results
+
 export default {
   name: "SitesListI18n",
   components: {
@@ -45,6 +47,12 @@ export default {
   }
 }
 
+.sites-list .container {
+  @media (max-width: var(--mobileViewWidth)) {
+    padding: 0;
+  }
+}
+
 .section-title {
   font-size: 18px;
   font-weight: 600;
@@ -53,6 +61,10 @@ export default {
 }
 
 .empty {
+  background: #fff;
+  border: 1px solid var(--mainLight);
+  line-height: 1;
+  padding: var(--spacing-x-large) 0;
   text-align: center;
 }
 </style>

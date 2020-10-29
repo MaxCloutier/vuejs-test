@@ -6,12 +6,12 @@
         <SiteShortDescription :site="site" />
       </div>
     </SectionHeader>
-    <b-container>
-      <Splide v-if="site.images" :options="options">
-        <SplideSlide v-for="(image, index) in site.images" :key="index">
-          <img :src="image" />
-        </SplideSlide>
-      </Splide>
+    <b-container class="main-content">
+      <div
+        v-if="site.images"
+        class="main-img"
+        :style="{ backgroundImage: `url(${site.images[0]})` }"
+      ></div>
       <b-row v-if="mainContact" class="site-info">
         <b-col class="col align-content-center" cols="12" md="6">
           <div class="info-icon">
@@ -72,8 +72,6 @@ import {
   getMainContact,
 } from "@/util/site.utils";
 import { mapGetters } from "vuex";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import SectionHeader from "@/components/SectionHeader";
 import SiteShortDescription from "@/components/SiteShortDescription";
 
@@ -82,15 +80,12 @@ export default {
   components: {
     SectionHeader,
     SiteShortDescription,
-    Splide,
-    SplideSlide,
   },
   data() {
     return {
       options: {
         type: "loop",
         autoWidth: true,
-        focus: "center",
         gap: "1em",
         height: "240px",
       },
@@ -113,8 +108,34 @@ export default {
 </script>
 <style lang="scss">
 .site-details {
-  .section-header .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .section-header {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    .container {
+      display: flex;
+    }
+  }
+
+  .main-content {
+    background: #fff;
     display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: var(--spacing-x-large);
+
+    .main-img {
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: relative;
+      height: 0;
+      padding-top: 32%;
+      margin: 0 -15px;
+    }
   }
 
   .content {
@@ -127,8 +148,12 @@ export default {
     flex-grow: 0;
   }
 
-  .site-info .col {
-    margin-top: var(--spacing-xx-large);
+  .site-info {
+    flex-grow: 1;
+
+    .col {
+      margin-top: var(--spacing-xx-large);
+    }
   }
 
   .info-icon {

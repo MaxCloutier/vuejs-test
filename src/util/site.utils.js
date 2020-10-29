@@ -4,7 +4,7 @@ export const formatAddress = (address) => {
   }
   const { city, country, state, street, zipCode } = address;
 
-  return [city, country, state, street, zipCode].join(", ");
+  return [city, country, state, street, zipCode].filter(Boolean).join(", ");
 };
 
 export const getMainContact = (contacts) => {
@@ -21,5 +21,5 @@ export const formatContact = (contact) => {
   }
   const { firstName, lastName } = contact;
 
-  return `${firstName} ${lastName}`;
+  return [firstName, lastName].filter(Boolean).join(" ");
 };

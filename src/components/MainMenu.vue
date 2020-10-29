@@ -1,0 +1,29 @@
+<template>
+  <div class="sidebar">TODO Main Menu Here</div>
+</template>
+<script>
+export default {
+  name: "MainMenu",
+};
+</script>
+
+<style lang="scss">
+.sidebar {
+  background: var(--mainLight);
+  flex-grow: 0;
+  flex-shrink: 1;
+  padding-top: var(--spacing-xx-large);
+  height: 100%;
+  width: var(--sidebarWidth);
+
+  @media (max-width: var(--tabletViewWidth)) {
+    position: fixed;
+    border: none;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+    left: 0;
+    top: 59px;
+    bottom: 0;
+    z-index: 10;
+  }
+}
+</style>

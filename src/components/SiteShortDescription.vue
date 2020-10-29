@@ -45,6 +45,7 @@ export default {
 <style lang="scss">
 .img-wrapper {
   height: auto;
+  flex-shrink: 0;
 }
 
 .content-wrapper {

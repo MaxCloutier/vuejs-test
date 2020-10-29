@@ -93,7 +93,12 @@ export default {
   border-bottom: none;
   padding: var(--spacing-small);
 
+  @media (max-width: var(--mobileViewWidth)) {
+    padding: var(--spacing-medium) var(--spacing-large);
+  }
+
   .mobile-search {
+    margin-top: var(--spacing-medium);
     width: 100%;
   }
 

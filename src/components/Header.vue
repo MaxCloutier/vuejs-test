@@ -3,7 +3,10 @@
     <b-container>
       <b-row align-content="center">
         <b-col cols="auto" sm="3" md="2">
-          <button class="menu icon-btn visible-sm visible-xs hidden">
+          <button
+            class="menu icon-btn visible-sm visible-xs hidden"
+            @click="$store.dispatch('toggleMenu')"
+          >
             <BIconList />
           </button>
         </b-col>
