@@ -40,31 +40,4 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.sites-list {
-  .section-header .container {
-    justify-content: center;
-  }
-}
-
-.sites-list .container {
-  @media (max-width: var(--mobileViewWidth)) {
-    padding: 0;
-  }
-}
-
-.section-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  margin: 0;
-}
-
-.empty {
-  background: #fff;
-  border: 1px solid var(--mainLight);
-  line-height: 1;
-  padding: var(--spacing-x-large) 0;
-  text-align: center;
-}
-</style>
+<style lang="scss" src="./style.scss"></style>

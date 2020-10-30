@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import SitesListI18n from "../views/SitesListI18n.vue";
+import SitesListI18n from "../views/SitesList/index.vue";
 
 Vue.use(VueRouter);
 
@@ -13,11 +13,7 @@ const routes = [
   {
     path: "/site/:id",
     name: "SiteDetails",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/SiteDetailsI18n.vue"),
+    component: () => import("../views/SiteDetails/index.vue"),
   },
 ];
 

@@ -9,12 +9,10 @@ import "./assets/bootstrap_custom.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import "./assets/default.scss";
 import i18n from "./i18n";
-import VueSplide from "@splidejs/vue-splide";
 import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
 
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
-Vue.use(VueSplide);
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

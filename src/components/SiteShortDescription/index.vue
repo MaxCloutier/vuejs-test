@@ -42,32 +42,4 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.img-wrapper {
-  height: auto;
-  flex-shrink: 0;
-}
-
-.content-wrapper {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-}
-
-.content {
-  color: var(--mainDark);
-  padding: 0 var(--spacing-xx-large);
-  text-align: left;
-  font-size: 14px;
-
-  .title {
-    font-size: 14px;
-    font-weight: 600;
-    margin: 0;
-  }
-
-  p {
-    margin: 0;
-  }
-}
-</style>
+<style lang="scss" src="./style.scss"></style>

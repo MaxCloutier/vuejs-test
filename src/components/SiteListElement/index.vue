@@ -24,28 +24,4 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.wrapper {
-  align-items: center;
-  background: #fff;
-  border: 1px solid var(--mainLight);
-  display: flex;
-  padding: var(--spacing-medium) var(--spacing-large);
-  transition: background 0.3s;
-
-  &:hover {
-    background: #f6f6f6;
-    text-decoration: none;
-  }
-
-  & + .wrapper {
-    border-top: 0;
-  }
-}
-
-.chevron {
-  fill: var(--main-dark);
-  height: 20px;
-  width: 20px;
-}
-</style>
+<style lang="scss" src="./style.scss"></style>

@@ -50,27 +50,4 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.img {
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-  height: 0;
-  padding-top: 100%;
-
-  span {
-    background: #f1f2f3;
-    color: var(--mainDark);
-    font-size: 30px;
-  }
-
-  img,
-  span {
-    border-radius: 50%;
-    bottom: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-</style>
+<style lang="scss" src="./style.scss"></style>
