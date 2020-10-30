@@ -11,19 +11,6 @@
   margin: 0;
 }
 
-.user-menu-btn {
-  border-radius: 50%;
-  border: 1px solid var(--mainDark);
-  height: 42px;
-  overflow: hidden;
-  width: 42px;
-  transition: border 0.3s;
-
-  &:hover {
-    border-color: #22467d;
-  }
-}
-
 .icon-btn {
   border-radius: 50%;
   height: 42px;

@@ -54,48 +54,4 @@
       outline: none;
     }
   }
-
-  .select-wrapper {
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid var(--secondaryDark);
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    transition: border 0.3s;
-
-    svg {
-      fill: var(--secondaryDark);
-      margin-right: var(--spacing-small);
-      transition: fill 0.3s;
-    }
-
-    &:focus-within {
-      border-color: var(--mainBlue);
-
-      svg {
-        fill: var(--mainBlue);
-      }
-    }
-  }
-
-  .select-wrapper-2 {
-    overflow: hidden;
-  }
-
-  select {
-    margin-right: -19px;
-    padding: var(--spacing-small) var(--spacing-medium);
-    margin-left: 0;
-    color: var(--mainGray);
-    border: none;
-    background: none;
-    margin-bottom: 1px;
-    margin-top: 1px;
-    min-width: 200px;
-
-    &:focus {
-      outline: none;
-    }
-  }
 }

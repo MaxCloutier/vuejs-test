@@ -28,6 +28,8 @@ const mutations = {
 
 const getters = {
   clients: (state) => state.clients,
+  clientsAsOptions: (state) =>
+    state.clients.map(({ id, givenName }) => ({ label: givenName, value: id })),
 };
 
 export default {

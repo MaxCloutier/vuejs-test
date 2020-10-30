@@ -1,5 +1,8 @@
 {
   "allSites": "Tous les sites",
+  "changeAppLang": "Changer la langue de l'application",
+  "english": "Anglais",
+  "french": "Français",
   "noSites": "Aucun sites",
   "scheduling": "Planification",
   "searchSite": "Chercher un site",

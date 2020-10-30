@@ -24,48 +24,24 @@
           <button class="icon-btn">
             <BIconGrid3x3GapFill />
           </button>
-          <button v-if="user" class="user-menu-btn">
-            <RoundImage :image="user.avatar" :text="user.givenName" />
-          </button>
-          <!--button
-            v-for="lang in languages.filter(lang => lang !== this.userLang)"
-            :key="lang"
-            v-on:click="updateUserLang(lang)"
-          >{{ lang }}</button-->
+          <UserAvatar />
         </b-col>
       </b-row>
     </b-container>
   </header>
 </template>
 <script>
-import { mapGetters } from "vuex";
-import RoundImage from "@/components/RoundImage";
+import UserAvatar from "@/components/UserAvatar";
 
 export default {
   name: "Header",
   components: {
-    RoundImage,
+    UserAvatar,
   },
   props: {
     title: {
       type: String,
       required: true,
-    },
-  },
-  data() {
-    return {
-      languages: ["en", "fr"],
-    };
-  },
-  computed: {
-    ...mapGetters({
-      userLang: "userLang",
-      user: "user",
-    }),
-  },
-  methods: {
-    updateUserLang(lang) {
-      this.$store.dispatch("updateUserLang", { lang });
     },
   },
 };

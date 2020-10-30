@@ -2,21 +2,11 @@
   <div class="section-filters">
     <b-container>
       <div class="left">
-        <div class="select-wrapper">
-          <div class="select-wrapper-2">
-            <select v-model="clientId">
-              <option :value="null">{{ $t("allSites") }}</option>
-              <option
-                v-for="client in clients"
-                :key="client.id"
-                :value="client.id"
-              >
-                {{ client.givenName }}
-              </option>
-            </select>
-          </div>
-          <BIconCaretDown />
-        </div>
+        <Select
+          v-model="clientId"
+          :placeholder="$t('allSites')"
+          :options="clients"
+        />
       </div>
       <div class="right">
         <div class="search">
@@ -47,11 +37,15 @@
   </div>
 </template>
 <script>
+import Select from "@/components/Select";
 import { mapGetters } from "vuex";
 // TODO add filtering by tags
 
 export default {
   name: "SiteListFilters",
+  components: {
+    Select,
+  },
   data() {
     return {
       search: "",
@@ -61,7 +55,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      clients: "clients",
+      clients: "clientsAsOptions",
       filters: "filters",
     }),
   },
